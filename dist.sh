@@ -11,4 +11,9 @@ rm -rf dist/i18n
 ./sh/filename_min.coffee
 ./sh/sw.coffee
 cp sh/dist/* dist
+
+# 如果更新 index.htm 、s.js ，请手动运行 sh/index.htm.sh
+
+./sh/upload.htm.coffee
+
 #./sh/qiniu.unload.coffee

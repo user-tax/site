@@ -6,4 +6,4 @@ set -ex
 
 ./dist.js.sh
 ./index_htm.coffee
-../dist.sh
+#../dist.sh
