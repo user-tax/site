@@ -7,12 +7,10 @@
   path > join dirname
   @u7/blake3 > blake3Hash
   base-x
-  mime-types:mime
+  ./mime
   knex
   ./env > DIST ROOT PWD
   ./put
-
-mime.types.js = 'text/javascript'
 
 BFILE = BaseX '!$-.0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz'
 
@@ -38,7 +36,6 @@ for await fp from await opendir PUBLIC
   if not fp.isFile()
     continue
   IGNORE.add fp.name
-
 
 all = new Set()
 for await fp from await opendir DIST
@@ -124,7 +121,7 @@ for i,p in to_replace
     key
     =>
       createReadStream fp
-    mime.lookup i
+    mime i
   )
   await DB(table).where({id}).update({uploaded:true})
   await unlink fp
