@@ -3,10 +3,10 @@
 > ./s3.cdn:
   ./env > DIST
   ./put
+  @u7/doge
   @u7/read
   path > join
   stream > Readable
-  @u7/doge
   ./cloudflare
 
 url = (i)=>i.slice(i.lastIndexOf('/')+1,-1)
@@ -46,7 +46,7 @@ do =>
       {
         rtype: 'url'
         urls: JSON.stringify([
-          'https://usr.tax/v'
+          url
         ])
       }
     )
