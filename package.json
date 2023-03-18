@@ -20,11 +20,11 @@
     "@u7/walk": "^0.0.10",
     "@u7/write": "^0.0.9",
     "@u7/zipint": "^0.0.2",
-    "@w5/i18n": "^0.0.72",
+    "@w5/i18n": "^0.0.73",
     "base-p": "^2.0.0",
     "base-x": "^4.0.0",
     "better-sqlite3": "^8.2.0",
-    "coffee_plus": "^0.0.55",
+    "coffee_plus": "^0.0.58",
     "coffeescript": "^2.7.0",
     "concurrently": "^7.6.0",
     "dotenv": "^16.0.3",
@@ -39,11 +39,11 @@
     "pug": "^3.0.2",
     "radix-64": "^1.0.4",
     "stylus": "^0.59.0",
-    "svelte": "^3.56.0",
+    "svelte": "^3.57.0",
     "svgo": "^3.0.2",
-    "typed.js": "^2.0.12",
+    "typed.js": "^2.0.132",
     "uglify-js": "^3.17.4",
     "user.tax": "link:../ui",
-    "vite": "^4.1.4"
+    "vite": "^4.2.0"
   }
 }
