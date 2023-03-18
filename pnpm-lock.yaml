@@ -14,7 +14,7 @@ specifiers:
   '@u7/walk': ^0.0.10
   '@u7/write': ^0.0.9
   '@u7/zipint': ^0.0.2
-  '@user.tax/i18n': ^0.0.70
+  '@w5/i18n': ^0.0.72
   base-p: ^2.0.0
   base-x: ^4.0.0
   better-sqlite3: ^8.2.0
@@ -54,7 +54,7 @@ devDependencies:
   '@u7/walk': 0.0.10
   '@u7/write': 0.0.9
   '@u7/zipint': 0.0.2
-  '@user.tax/i18n': 0.0.70
+  '@w5/i18n': 0.0.72
   base-p: 2.0.0
   base-x: 4.0.0
   better-sqlite3: 8.2.0
@@ -1522,8 +1522,8 @@ packages:
     resolution: {integrity: sha512-JWYU9TgVNp6Te8kP40LezAL6/kOVHsUtwaWj036hw1mLa5T80F8Ntrnnc8yG+2gEAq2VoY2lBLsj/7vMFJgXLw==}
     dev: true
 
-  /@u7/binmap/0.0.10:
-    resolution: {integrity: sha512-TVXD9UZS/doFvgG2HnRIzUmciy4xQK+zJJNYxeFXatpbVU3P3uDzff7pSRRlOTYV6ZOa9S7BNuORiL+5lBgskg==}
+  /@u7/binmap/0.0.11:
+    resolution: {integrity: sha512-fXVqC2TShs6h3zdZuVpfl+AdBcmTXJL91yrn0LuVwsbWAzOgT4N31J8oNXvTj0dyDv/JLPKH5NblL0g9/sAV9Q==}
     dev: true
 
   /@u7/blake3/0.0.2:
@@ -1542,6 +1542,19 @@ packages:
     resolution: {integrity: sha512-pEZ2RAV3/izTFJGF5G/rm3Idamc7LYPIS7ABMMCESJBCkI+qCbmu9tvms4/4wh2vJyswHACrE3dFtsitgJuZyw==}
     dependencies:
       '@u7/utf8': 0.0.4
+    dev: true
+
+  /@u7/htm2md/0.0.1:
+    resolution: {integrity: sha512-MB3cUBRDElsIMX3tiyYhEB9ZuZu2kpmhJay4x5G1bhdjufc+psN3N68lbw9BuTaHsy/6hMUoKjvp65C+b2hyEA==}
+    dependencies:
+      turndown: 7.1.1
+    dev: true
+
+  /@u7/md2htm/0.0.4:
+    resolution: {integrity: sha512-e9DCtNPI53T2QsCmk2/pn29mUFCktG6cldKqd9Zh04tGYoRwT6V1G1zArkO0FzeB91BCM2B8WsxaEyTqI71fbw==}
+    dependencies:
+      cmark-gfm: 0.9.0
+      html-entities: 2.3.3
     dev: true
 
   /@u7/node-loader/0.0.49:
@@ -1642,6 +1655,16 @@ packages:
       svelte: 3.56.0
     dev: true
 
+  /@u7/tran/0.0.4:
+    resolution: {integrity: sha512-ZdkdIZ1I8OTsWi+1lmLEd3FNJgb0HMFUSJNtI7u2h/JT/p8urqq0hb0VTMup1LCpkm1Ik/jNJ08QUBeoU/Unog==}
+    dependencies:
+      '@u7/req': 0.0.13
+      http-proxy-agent: 5.0.0
+      node-fetch: 3.3.1
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /@u7/u8/0.0.9:
     resolution: {integrity: sha512-a2cZuw5av0d8zjkuYca4B+yeK2d6fvuN8X08Uliq7zkqJnVtQb4zgCTwQdVjhsimjzlrZdU2Kywig4YXOp1JqQ==}
     dev: true
@@ -1692,17 +1715,16 @@ packages:
       fastintcompression: 0.0.4
     dev: true
 
-  /@user.tax/i18n/0.0.70:
-    resolution: {integrity: sha512-APRFijn8EackhgLXhXFEwKv+OpxfcZJqPtHxk4HRJnkE0VYcLyK783HFHYb9mj7KyCxZXWaBWX8jBBBRjQUUdQ==}
+  /@w5/i18n/0.0.72:
+    resolution: {integrity: sha512-WQizOF8ZV/2KOXXmE0hxgSYFxgPqM0dEdXCs2oR/db+rm+y/0u3ACHFNPegh0kr6tN+uVNvi/4O5qiYz99M6DQ==}
     hasBin: true
     dependencies:
       '@u6x/jsext': 0.0.27
-      '@u7/binmap': 0.0.10
-      '@u7/blake3': 0.0.2
       '@u7/read': 0.0.6
       '@u7/req': 0.0.13
       '@u7/sleep': 0.0.3
       '@u7/snake': 0.0.16
+      '@u7/tran': 0.0.4
       '@u7/u8': 0.0.9
       '@u7/utf8': 0.0.4
       '@u7/walk': 0.0.10
@@ -1710,18 +1732,62 @@ packages:
       '@u7/write': 0.0.9
       '@u7/xxhash3-wasm': 0.0.15
       '@u7/yml': 0.0.5
+      '@w5/lang': 0.0.5
+      '@w5/trmd': 0.0.10
       chalk: 5.2.0
       cmark-gfm: 0.9.0
       get_default: 0.0.4
       html-entities: 2.3.3
       http-proxy-agent: 5.0.0
-      node-fetch: 3.3.0
+      node-fetch: 3.3.1
       opencc-js: 1.0.5
       progress: 2.0.3
       radix-64: 1.0.4
       turndown: 7.1.1
     transitivePeerDependencies:
+      - mysql
+      - mysql2
+      - pg
+      - pg-native
+      - sqlite3
       - supports-color
+      - tedious
+    dev: true
+
+  /@w5/j2f/0.0.1:
+    resolution: {integrity: sha512-+T2ZuGoHJavvM4rmd3z7ntRiC78x3AaqodZIJz5vgBRkQUcoq/6aosFOT7IW5ejyEwrJ8Xaw5uTAR5181eJ+pw==}
+    dependencies:
+      opencc-js: 1.0.5
+    dev: true
+
+  /@w5/lang/0.0.5:
+    resolution: {integrity: sha512-Yqs0nTOQvxrEXURkFEbxMKUyxFC0dn9+kQLHsWve2JMLtQfV9xN+NaEgcJj3LqaciwoIDfURjRlitWyVnCXIig==}
+    dev: true
+
+  /@w5/trmd/0.0.10:
+    resolution: {integrity: sha512-KV12m4MrBO8jldXYZo7bA1yPArnwachEvK1WoS0WjEIe8dXoDRpmT2qC6SaK4aKYiYjLrnlfC7WYrbRlUi++gQ==}
+    dependencies:
+      '@u7/binmap': 0.0.11
+      '@u7/blake3': 0.0.2
+      '@u7/htm2md': 0.0.1
+      '@u7/md2htm': 0.0.4
+      '@u7/read': 0.0.6
+      '@u7/tran': 0.0.4
+      '@u7/u8': 0.0.9
+      '@u7/utf8': 0.0.4
+      '@u7/walk': 0.0.10
+      '@u7/write': 0.0.9
+      '@w5/j2f': 0.0.1
+      better-sqlite3: 8.2.0
+      knex: 2.4.2_better-sqlite3@8.2.0
+    transitivePeerDependencies:
+      - mysql
+      - mysql2
+      - pg
+      - pg-native
+      - sqlite3
+      - supports-color
+      - tedious
     dev: true
 
   /acorn/7.4.1:
@@ -3505,8 +3571,8 @@ packages:
     engines: {node: '>=10.5.0'}
     dev: true
 
-  /node-fetch/3.3.0:
-    resolution: {integrity: sha512-BKwRP/O0UvoMKp7GNdwPlObhYGB5DQqwhEDQlNKuoqwVYSxkSZCSbHjnFFmUEtwSKRPU4kNK8PbDYYitwaE3QA==}
+  /node-fetch/3.3.1:
+    resolution: {integrity: sha512-cRVc/kyto/7E5shrWca1Wsea4y6tL9iYJE5FBCius3JQfb/4P4I295PfhgbJQBLTx6lATE4z+wK0rPM4VS2uow==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dependencies:
       data-uri-to-buffer: 4.0.1
