@@ -14,7 +14,7 @@ specifiers:
   '@u7/walk': ^0.0.10
   '@u7/write': ^0.0.9
   '@u7/zipint': ^0.0.2
-  '@w5/i18n': ^0.0.73
+  '@w5/i18n': ^0.0.80
   base-p: ^2.0.0
   base-x: ^4.0.0
   better-sqlite3: ^8.2.0
@@ -54,7 +54,7 @@ devDependencies:
   '@u7/walk': 0.0.10
   '@u7/write': 0.0.9
   '@u7/zipint': 0.0.2
-  '@w5/i18n': 0.0.73
+  '@w5/i18n': 0.0.80
   base-p: 2.0.0
   base-x: 4.0.0
   better-sqlite3: 8.2.0
@@ -1715,8 +1715,15 @@ packages:
       fastintcompression: 0.0.4
     dev: true
 
-  /@w5/i18n/0.0.73:
-    resolution: {integrity: sha512-tyN4Xqcs+02GqaB7vaIq1biGAUdCpPFUOJDRDfJYwgz9UY/mthVIGziSK7IjoA5KyDyTB+9mc5NDfpB7310iqQ==}
+  /@w5/bar/0.0.3:
+    resolution: {integrity: sha512-EmUK+0ufdwIbwFUFUi7lmDLxlvFNWLtE4Rq/VLsKpafC5auHLtHh9+7X3TcidfRa5nj87mbxUhMBhrvkJb0Yww==}
+    dependencies:
+      chalk: 5.2.0
+      progress: 2.0.3
+    dev: true
+
+  /@w5/i18n/0.0.80:
+    resolution: {integrity: sha512-M3eyDcFuRjkE9oiAw/+gBoaV1K90YyTghG/QIv8HHSPbyBK//Hr69rMROkM8i1ONy0UZicKQ76yowbV9ke5z3w==}
     hasBin: true
     dependencies:
       '@u6x/jsext': 0.0.27
@@ -1733,7 +1740,7 @@ packages:
       '@u7/xxhash3-wasm': 0.0.15
       '@u7/yml': 0.0.5
       '@w5/lang': 0.0.5
-      '@w5/trmd': 0.0.10
+      '@w5/trmd': 0.0.16
       chalk: 5.2.0
       cmark-gfm: 0.9.0
       get_default: 0.0.4
@@ -1764,8 +1771,8 @@ packages:
     resolution: {integrity: sha512-Yqs0nTOQvxrEXURkFEbxMKUyxFC0dn9+kQLHsWve2JMLtQfV9xN+NaEgcJj3LqaciwoIDfURjRlitWyVnCXIig==}
     dev: true
 
-  /@w5/trmd/0.0.10:
-    resolution: {integrity: sha512-KV12m4MrBO8jldXYZo7bA1yPArnwachEvK1WoS0WjEIe8dXoDRpmT2qC6SaK4aKYiYjLrnlfC7WYrbRlUi++gQ==}
+  /@w5/trmd/0.0.16:
+    resolution: {integrity: sha512-xNvykThhi5Gw6b1KjBbYQR6RRF4tQq24nm3HWsB8AG07RWLrqadmvMTM3whT+V4jRKoCzgBXVKdZ3p4XPtPuXw==}
     dependencies:
       '@u7/binmap': 0.0.11
       '@u7/blake3': 0.0.2
@@ -1777,6 +1784,7 @@ packages:
       '@u7/utf8': 0.0.4
       '@u7/walk': 0.0.10
       '@u7/write': 0.0.9
+      '@w5/bar': 0.0.3
       '@w5/j2f': 0.0.1
       better-sqlite3: 8.2.0
       knex: 2.4.2_better-sqlite3@8.2.0
